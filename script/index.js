@@ -15,14 +15,17 @@ function clearDisplay(){
     saveData();
 }
 
-function calculate(){
-    try{
+function calculate() {
+    if (display.value === "Error") {
+        saveData(); 
+        return; 
+    }
+    try {
         display.value = eval(display.value);
         saveData();
-    }
-    catch(error){
-        display.value = 'Error'
-        saveData();
+    } catch (error) {
+        display.value = "Error";
+        saveData();  
     }
 }
 
@@ -41,7 +44,6 @@ function removeLast(){
 }
 
 // local storage
-
 function saveData(){
     localStorage.setItem("data", display.value);
 }
