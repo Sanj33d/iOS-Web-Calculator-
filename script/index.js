@@ -28,7 +28,7 @@ function removeLast(){
         newVal += val[i]
     }
     display.value = newVal;
-    if (display.value === ""){
+    if (display.value === "" || display.value === null){
         display.value = "0"
     }
     saveData();
@@ -37,10 +37,16 @@ function removeLast(){
 // local storage
 
 function saveData(){
-    localStorage.setItem("storedData", display.value);
+    localStorage.setItem("data", display.value);
 }
 
 function showData(){
-    display.value = localStorage.getItem("storedData");
+    let storedData = localStorage.getItem("data");
+    if (storedData === null){
+        display.value = "0";
+    }
+    else{
+        display.value = storedData;
+    }
 }
 showData()
