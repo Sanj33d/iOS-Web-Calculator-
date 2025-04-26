@@ -8,30 +8,33 @@
 </head>
 <body>
     <div id="container">
-        <input id="display" type="text" value="default" readonly>
+        <input id="display" type="text" value="0" readonly>
         <div id="keys">
-            <button class="btn" onclick="addToDisplay()">AC</button>
-            <button class="btn" onclick="addToDisplay()">C</button>
-            <button class="btn" onclick="addToDisplay()">%</button>
-            <button class="btn" onclick="addToDisplay()">/</button>
-            <button class="btn" onclick="addToDisplay()">7</button>
-            <button class="btn" onclick="addToDisplay()">8</button>
-            <button class="btn" onclick="addToDisplay()">9</button>
-            <button class="btn" onclick="addToDisplay()">*</button>
-            <button class="btn" onclick="addToDisplay()">4</button>
-            <button class="btn" onclick="addToDisplay()">5</button>
-            <button class="btn" onclick="addToDisplay()">6</button>
-            <button class="btn" onclick="addToDisplay()">-</button>
-            <button class="btn" onclick="addToDisplay()">1</button>
-            <button class="btn" onclick="addToDisplay()">2</button>
-            <button class="btn" onclick="addToDisplay()">3</button>
-            <button class="btn" onclick="addToDisplay()">+</button>
-            <button id="btn-zero" onclick="addToDisplay()">0</button>
+            <button class="btn" onclick="clearDisplay()">AC</button>
+            <button class="btn" onclick="removeLast()">C</button>
+            <button class="btn" onclick="addToDisplay('%')">%</button>
+            <button class="btn operator-btn" onclick="addToDisplay('/')">÷</button>
+            <button class="btn" onclick="addToDisplay('7')">7</button>
+            <button class="btn" onclick="addToDisplay('8')">8</button>
+            <button class="btn" onclick="addToDisplay('9')">9</button>
+            <button class="btn operator-btn" onclick="addToDisplay('*')">×</button>
+            <button class="btn" onclick="addToDisplay('4')">4</button>
+            <button class="btn" onclick="addToDisplay('5')">5</button>
+            <button class="btn" onclick="addToDisplay('6')">6</button>
+            <button class="btn operator-btn" onclick="addToDisplay('-')">-</button>
+            <button class="btn" onclick="addToDisplay('1')">1</button>
+            <button class="btn" onclick="addToDisplay('2')">2</button>
+            <button class="btn" onclick="addToDisplay('3')">3</button>
+            <button class="btn operator-btn" onclick="addToDisplay('+')">+</button>
+            <button id="btn-zero" onclick="addToDisplay('0')">0</button>
             <!-- <button onclick="addToDisplay()">0</button> -->
-            <button class="btn" onclick="addToDisplay()">.</button>
-            <button class="btn" onclick="addToDisplay()">=</button>
+            <button class="btn" onclick="addToDisplay('.')">.</button>
+            <button class="btn operator-btn" onclick="calculate()">=</button>
 
         </div>
     </div>
+
+    <!-- script -->
+    <script src="script/index.js"></script>
 </body>
 </html>
