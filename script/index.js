@@ -16,8 +16,14 @@ function clearDisplay(){
 }
 
 function calculate(){
-    display.value = eval(display.value);
-    saveData();
+    try{
+        display.value = eval(display.value);
+        saveData();
+    }
+    catch(error){
+        display.value = 'Error'
+        saveData();
+    }
 }
 
 function removeLast(){

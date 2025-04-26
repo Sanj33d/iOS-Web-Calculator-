@@ -5,34 +5,36 @@
     box-sizing: border-box;*/
 }
 
-body{
+#container{
     display: flex;
     justify-content: center;
+    /* width: 100vw; */
     align-items: center;
-    height: 100vh;
+    height: 90vh;
 }
 
-#container{
+#calculator{
     /* width: 100*4 + gap:10*3 + padding:25*2 = total: 530*/
     max-width: 500px; 
     background-color: hsl(0, 0%, 15%);
     border-radius: 30px;
-    /* new: <overflow:hidden>; using it as a child instead of box-sizing*/
+    /* new: <overflow:hidden>; using it as a parent property instead of box-sizing*/
     overflow: hidden;
-    
 }
 
 #display{
     width: 100%;
-    padding: 20px;
+    padding: 40px;
     font-size: 3rem;
     /* text-align: left; */
     border: none;
     outline: none;
+    user-select: none;
+
     background-color: hsl(0, 0%, 20%);
     color: white;
-
 }
+
 #keys{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -40,26 +42,22 @@ body{
     padding: 25px;
 }
 
-#keys #btn-zero {
+/* btn-zero spanning two cols */
+#keys #btn-zero{
     grid-column: span 2;
 }
 /* hardcode */
 /* #keys button:nth-child(17) {
     grid-column: span 2;
 } */
+
 .btn{
     width: 100px;
     height: 100px;
     /* width, height mandatory for border-radius */
-    border-radius: 50px;
-    border: none;
-    font-size: 3rem;
-    color: white;
-    background-color: hsl(0, 0%, 30%);
-    font-weight: bold;
-
 }
-#btn-zero{
+
+#btn-zero, .btn{
     border: none;
     font-size: 3rem;
     color: white;
@@ -69,23 +67,33 @@ body{
     border-radius: 50px;
 }
 
-button:hover{
-    background-color: hsl(0, 0%, 40%);
-}
-
-button:active{
-    background-color: hsl(0, 0%, 50%);
-}
-
-.operator-btn{
+.btn-operator{
     background-color: hsl(35, 100%, 55%);
 }
 
-.operator-btn:hover{
+button:hover, #btn-zero:hover{
+    background-color: hsl(0, 0%, 40%);
+}
+
+.btn-operator:hover{
     background-color: hsl(35, 100%, 65%)
 }
 
-.operator-btn:active{
+button:active, #btn-zero:active{
+    background-color: hsl(0, 0%, 50%);
+}
+
+.btn-operator:active{
     background-color: hsl(35, 100%, 75%)
 }
 
+footer{
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+body{
+    background: rgb(236, 74, 74);
+}
