@@ -4,8 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
+    <link rel="stylesheet" href="style/index.css">
 </head>
 <body>
-    
+    <div id="container">
+        <input id="display" type="text" value="default" readonly>
+        <div id="keys">
+            <button class="btn" onclick="addToDisplay()">AC</button>
+            <button class="btn" onclick="addToDisplay()">C</button>
+            <button class="btn" onclick="addToDisplay()">%</button>
+            <button class="btn" onclick="addToDisplay()">/</button>
+            <button class="btn" onclick="addToDisplay()">7</button>
+            <button class="btn" onclick="addToDisplay()">8</button>
+            <button class="btn" onclick="addToDisplay()">9</button>
+            <button class="btn" onclick="addToDisplay()">*</button>
+            <button class="btn" onclick="addToDisplay()">4</button>
+            <button class="btn" onclick="addToDisplay()">5</button>
+            <button class="btn" onclick="addToDisplay()">6</button>
+            <button class="btn" onclick="addToDisplay()">-</button>
+            <button class="btn" onclick="addToDisplay()">1</button>
+            <button class="btn" onclick="addToDisplay()">2</button>
+            <button class="btn" onclick="addToDisplay()">3</button>
+            <button class="btn" onclick="addToDisplay()">+</button>
+            <button id="btn-zero" onclick="addToDisplay()">0</button>
+            <!-- <button onclick="addToDisplay()">0</button> -->
+            <button class="btn" onclick="addToDisplay()">.</button>
+            <button class="btn" onclick="addToDisplay()">=</button>
+
+        </div>
+    </div>
 </body>
 </html>
