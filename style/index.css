@@ -16,7 +16,7 @@
 #calculator{
     /* width: 100*4 + gap:10*3 + padding:25*2 = total: 530*/
     max-width: 500px; 
-    background-color: hsl(0, 0%, 15%);
+    background-color: hsl(0, 0%, 10%);
     border-radius: 30px;
     /* new: <overflow:hidden>; using it as a parent property instead of box-sizing*/
     overflow: hidden;
@@ -31,7 +31,7 @@
     outline: none;
     user-select: none;
 
-    background-color: hsl(0, 0%, 20%);
+    background-color: hsl(0, 0%, 5%);
     color: white;
 }
 
